@@ -4,10 +4,9 @@ const InventoryDetails = ({ watch }) => {
     const {title, price, image, description, quantity, supplier } = watch;
 
     return (
-        <>
             <div className="col-md-4">
-                <div className="card border-0 shadow rounded-3">
-                    <img src={image} className="card-img-top fit-img img-fluid" alt="" />
+                <div className="card border-0 shadow-lg rounded-3">
+                    <img src={image} className="w-75 mx-auto card-img-top fit-img img-fluid" alt="" />
                     <div className="card-body">
                         <h3 className="card-title fw-bold">{title}</h3>
                         <div className='d-flex justify-content-between'>
@@ -20,7 +19,6 @@ const InventoryDetails = ({ watch }) => {
                     </div>
                 </div>
             </div>
-        </>
     );
 };
 

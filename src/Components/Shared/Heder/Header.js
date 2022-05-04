@@ -12,16 +12,17 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle className='text-info' aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="text-center">
-                            <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to="/">Home</CustomLink>
-                            <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to="/inventory">Inventory</CustomLink>
-                            <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to='/about'>About</CustomLink>
-                            <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to='/blogs'>Blogs</CustomLink>
-                            <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to='/checkout'>Checkout</CustomLink>
-                            {/* {
+                        <Nav className="mx-auto">
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to="/">Home</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to="/inventory">Watches</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/manage'>Manage</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/addItem'>Add Item</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/myItems'>My Item</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/blogs'>Blogs</CustomLink>
+                        </Nav>
+                        {/* {
                                 user ? <button className='btn btn-sm btn-danger' onClick={handleLogout}>Logout</button> : <CustomLink className='text-white btn btn-sm btn-danger' to='/login'>Login</CustomLink>
                             } */}
-                        </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

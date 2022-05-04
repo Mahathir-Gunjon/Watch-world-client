@@ -8,7 +8,7 @@ const Inventory = () => {
         <div>
             <div className='container py-5'>
                         <h1 className='text-info text-center display-3 py-5 fw-bold'>Inventory</h1>
-                        <div className="row g-md-4">
+                        <div className="row g-5">
                             {
                                 watchs.map(watch => <InventoryDetails
                                     key={watch._id}
