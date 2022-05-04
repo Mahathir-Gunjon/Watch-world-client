@@ -1,0 +1,11 @@
+.banner-bg{
+    background: url(https://wallpaperaccess.com/full/1567665.png) no-repeat center center;
+    background-size: cover;
+    height: 93vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.opacity{
+    
+}

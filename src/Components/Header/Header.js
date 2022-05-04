@@ -6,7 +6,7 @@ import CustomLink from './NavLinks';
 const Header = () => {
     const [menu, setMenu] = useState(false)
     return (
-        <div>
+        <div className='fixed-top'>
             <nav className='bg-cyan-50'>
                 <div className="flex justify-between container w-5/6 mx-auto">
                     <div>
@@ -14,7 +14,7 @@ const Header = () => {
                             <img className='w-5/6' src="https://i.ibb.co/wr7bmcH/Watch-world.png" alt="Watch-world" border="0" />
                         </Link>
                     </div>
-                    <div className={`md:flex align-middle w-10/12 bg-cyan-50 gap-4 text-base mt-4 font-medium justify-end absolute md:static ${menu ? 'top-12 p-4' : 'top-[-120px]'}`}>
+                    <div className={`md:flex align-middle w-10/12 bg-cyan-50 gap-4 text-base mt-4 font-medium justify-end absolute md:static ${menu ? 'top-12 p-4 z-50' : 'top-[-170px]'}`}>
                         <CustomLink to="/">Home</CustomLink>
                         <CustomLink to="/reviews">Inventory</CustomLink>
                         <CustomLink to="/blogs">Blogs</CustomLink>
