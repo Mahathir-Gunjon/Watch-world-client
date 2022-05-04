@@ -14,15 +14,16 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mx-auto">
                             <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to="/">Home</CustomLink>
-                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to="/inventory">Watches</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to="/inventory">Inventory</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/manage'>Manage</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/addItem'>Add Item</CustomLink>
-                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/myItems'>My Item</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/myItem'>My Item</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/blogs'>Blogs</CustomLink>
                         </Nav>
                         {/* {
                                 user ? <button className='btn btn-sm btn-danger' onClick={handleLogout}>Logout</button> : <CustomLink className='text-white btn btn-sm btn-danger' to='/login'>Login</CustomLink>
                             } */}
+                        <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/blogs'>login</CustomLink>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

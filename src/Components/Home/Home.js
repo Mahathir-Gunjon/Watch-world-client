@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <section>
-                <div className='hero-section d-flex align-items-center'>
+                <div className='hero-section d-flex align-items-center mt-5'>
                     <div className="container">
                         <div className="row">
                             <div className="col-md-5 order-md-last">
