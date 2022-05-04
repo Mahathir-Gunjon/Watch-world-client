@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import Inventory from '../Inventory/Inventory';
 import './Home.css'
 
 const Home = () => {
@@ -44,6 +45,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <Inventory/>
         </>
     );
 };

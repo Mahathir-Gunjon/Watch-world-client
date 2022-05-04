@@ -1,44 +1,56 @@
 [
-    {
-      "id": "625c29142594bf6c99e5448f",
-      "price": "2,832.16",
-      "image": "https://i.ibb.co/2WDQ5cK/w6.jpg",
-      "title": "Zeblaze GTS Pro ",
-      "description": "1.65inch HD Touch Screen Waterproof Smart Watch Black  \r\n"
-    },
-    {
-      "id": "625c2914bddcfd1a43fb3842",
-      "price": "1,658.97",
-      "image": "https://i.ibb.co/FDQNqsG/w5.jpg",
-      "title": "T55",
-      "description": "Smart Watch Android Watches Men Women Waterproof SmartWatch \r\n"
-    },
-    {
-      "id": "625c2914a4843bd275569577",
-      "price": "2,248.81",
-      "image": "https://i.ibb.co/L5GtZ9q/w4.jpg",
-      "title": "Amazfit GTS 2",
-      "description": "Mini Smart Watch Global Version Black \r\n"
-    },
-    {
-      "id": "625c2914938bb69fe0dabb75",
-      "price": "1,794.20",
-      "image": "https://i.ibb.co/c14C3sx/w3.jpg",
-      "title": "One plus Fitness Band",
-      "description": "Smart Watch With Oxygen Saturation & Skin Temperature Sensor Raven Black \r\n"
-    },
-    {
-        "id": "625c2914y4843bd275569577",
-        "price": "2,248.81",
-        "image": "https://i.ibb.co/VxKVFGy/w2.jpg",
-        "title": "Amazfit GTR 3 pro",
-        "description": "Smart Watch With Classic Navigation Crown, B.Phone Call, Bio Tracker 3.0 & Alexa Brown Leather  \r\n"
-      },
-      {
-        "id": "625c2914938bb49fe0dabb75",
-        "price": "1,794.20",
-        "image": "https://i.ibb.co/FJZL9CV/w7.jpg",
-        "title": "G-Shock MRGB2000B1A1",
-        "description": "Smart Bracelet Colorful Screen Blood Pressure Heart Rate Monitor \r\n"
-      }
-  ]
+  {
+    "_id": "625c29142594bf6c99e5448f",
+    "price": "2,832.16",
+    "image": "https://i.ibb.co/2WDQ5cK/w6.jpg",
+    "title": "Zeblaze GTS Pro ",
+    "description": "1.65inch HD Touch Screen Waterproof Smart Watch Black  \r\n",
+    "quantity": 5,
+    "supplier": "Zeblaze"
+  },
+  {
+    "_id": "625c2914bddcfd1a43fb3842",
+    "price": "1,658.97",
+    "image": "https://i.ibb.co/FDQNqsG/w5.jpg",
+    "title": "T55",
+    "description": "Smart Watch Android Watches Men Women Waterproof SmartWatch \r\n",
+    "quantity": 10,
+    "supplier": "Alex"
+  },
+  {
+    "_id": "625c2914a4843bd275569577",
+    "price": "2,248.81",
+    "image": "https://i.ibb.co/L5GtZ9q/w4.jpg",
+    "title": "Amazfit GTS 2",
+    "description": "Mini Smart Watch Global Version Black Water proof and dust proof \r\n",
+    "quantity": 10,
+    "supplier": "Yamin"
+  },
+  {
+    "_id": "625c2914938bb69fe0dabb75",
+    "price": "1,794.20",
+    "image": "https://i.ibb.co/c14C3sx/w3.jpg",
+    "title": "One plus Fitness Band",
+    "description": "Smart Watch With Oxygen Saturation & Skin Temperature Sensor Raven Black \r\n",
+    "quantity": 10,
+    "supplier": "John"
+  },
+  {
+    "_id": "625c2914y4843bd275569577",
+    "price": "2,248.81",
+    "image": "https://i.ibb.co/VxKVFGy/w2.jpg",
+    "title": "Amazfit GTR 3 pro",
+    "description": "Smart Watch With Classic Navigation Crown, B.Phone Call, Bio Tracker 3.0 & Alexa Brown Leather  \r\n",
+    "quantity": 10,
+    "supplier": "Alina"
+  },
+  {
+    "_id": "625c2914938bb49fe0dabb75",
+    "price": "1,794.20",
+    "image": "https://i.ibb.co/bsRHfVc/Untitlezdfgd-design.png",
+    "title": "G-Shock MRGB2000B1A1",
+    "description": "Smart Bracelet Colorful Screen Blood Pressure Heart Rate Monitor \r\n",
+    "quantity": 12,
+    "supplier": "Kabir"
+  }
+]

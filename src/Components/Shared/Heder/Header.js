@@ -10,10 +10,11 @@ const Header = () => {
                     <Navbar.Brand>
                         <img src="https://i.ibb.co/wr7bmcH/Watch-world.png" alt="" />
                     </Navbar.Brand>
-                    <Navbar.Toggle className='text-danger' aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle className='text-info' aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="ms-auto">
+                        <Nav className="text-center">
                             <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to="/">Home</CustomLink>
+                            <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to="/inventory">Inventory</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to='/about'>About</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to='/blogs'>Blogs</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-6 fw-normal' to='/checkout'>Checkout</CustomLink>
