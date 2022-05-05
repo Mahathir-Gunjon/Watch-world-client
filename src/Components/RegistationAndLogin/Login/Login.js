@@ -92,11 +92,11 @@ const Login = () => {
     const allLoading = loading || googleLoading;
 
     return (
-        <div className='hero-section bg-black text-white'>
-            <div className='container'>
-                <div className='bg-dark mx-auto px-4 py-5 from-bg rounded-3' style={{ width: '400px' }}>
+        <div className='hero-section text-black mt-5'>
+            <div className='container mt-5 pt-5'>
+                <div className='bg-light mx-auto px-4 py-5 from-bg rounded-3' style={{ width: '400px' }}>
                     <Form onSubmit={handleSubmit}>
-                        <h2 className='text-danger mb-3 text-center'>Sign in</h2>
+                        <h1 className='mb-3 text-center'>Sign in</h1>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" required />
@@ -109,8 +109,8 @@ const Login = () => {
                         </Form.Group>
                         {error && <Form.Text className="text-danger">{error?.message}</Form.Text>}
                         {allLoading && <Form.Text className="text-white"></Form.Text>}
-                        <button className='btn btn-lg btn-outline-danger w-100 mt-4' type="submit">Sign in</button>
-                        <p className='text-center'>Don't have an account?  <Link className='text-decoration-none text-danger' to='/signup'>Signup now</Link></p>
+                        <button className='btn btn-lg btn-outline-info w-100 mt-4' type="submit">Sign in</button>
+                        <p className='text-center'>Don't have an account?  <Link className='text-decoration-none text-info' to='/signup'>Signup now</Link></p>
                         <p className='text-center'>Forget password?<button className='btn btn-link text-decoration-none text-danger' onClick={resetPassword}>Reset</button></p>
                     </Form>
                     <div style={{ display: 'flex' }}>
@@ -119,7 +119,7 @@ const Login = () => {
                         <p className='lines'></p>
                     </div>
                     <div className='d-flex justify-content-center mt-1'>
-                        <button className='btn btn-lg btn-danger w-100' onClick={() => signInWithGoogle()}>Google Sign in</button>
+                        <button className='rounded-circle btn' style={{width:'60px'}} onClick={() => signInWithGoogle()}> <img className='img-fluid' src="https://www.apkmirror.com/wp-content/uploads/2020/05/5ec5cd7e3b940.png" alt="" /> </button>
                     </div>
                 </div>
                 <ToastContainer
