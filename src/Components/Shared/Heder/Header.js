@@ -23,7 +23,7 @@ const Header = () => {
                         {/* {
                                 user ? <button className='btn btn-sm btn-danger' onClick={handleLogout}>Logout</button> : <CustomLink className='text-white btn btn-sm btn-danger' to='/login'>Login</CustomLink>
                             } */}
-                        <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/blogs'>login</CustomLink>
+                        <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/login'>Login</CustomLink>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

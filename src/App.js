@@ -1,10 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import Additem from './Components/AddItem/Additem';
+import RequireAuth from './Components/Auth/RequireAuth/RequireAuth';
 import Blogs from './Components/Blogs/Blogs';
 import Home from './Components/Home/Home';
 import Inventory from './Components/Inventory/Inventory';
 import ManageItem from './Components/ManageItem/ManageItem';
 import MyItem from './Components/MyItem/MyItem';
+import Login from './Components/RegistationAndLogin/Login/Login';
+import Signup from './Components/RegistationAndLogin/Sugnup/Signup';
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Heder/Header';
 import Notfound from './Components/Shared/Notfound';
@@ -13,18 +16,24 @@ import Notfound from './Components/Shared/Notfound';
 function App() {
   return (
     <div>
-      <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/inventory" element={<Inventory />} />
-        <Route path="/manage" element={<ManageItem />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/manage" element={
+          <RequireAuth>
+            <ManageItem />
+          </RequireAuth>
+        } />
         <Route path="/addItem" element={<Additem />} />
         <Route path="/myItem" element={<MyItem />} />
         {/* not found */}
         <Route path="*" element={<Notfound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
