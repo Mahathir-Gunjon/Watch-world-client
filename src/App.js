@@ -28,8 +28,16 @@ function App() {
             <ManageItem />
           </RequireAuth>
         } />
-        <Route path="/addItem" element={<Additem />} />
-        <Route path="/myItem" element={<MyItem />} />
+        <Route path="/addItem" element={
+          <RequireAuth>
+            <Additem />
+          </RequireAuth>
+        } />
+        <Route path="/myItem" element={
+          <RequireAuth>
+            <MyItem />
+          </RequireAuth>
+        } />
         {/* not found */}
         <Route path="*" element={<Notfound />} />
       </Routes>

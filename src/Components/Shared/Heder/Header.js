@@ -1,8 +1,19 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import CustomLink from './Navlink';
 
 const Header = () => {
+
+    const [user] = useAuthState(auth);
+    console.log(user);
+
+    const handleLogout = () => {
+        signOut(auth)
+    }
+
     return (
         <div>
             <Navbar collapseOnSelect expand="md" bg="light" variant="dark" className='py-0 px-3 fixed-top'>
@@ -20,10 +31,12 @@ const Header = () => {
                             <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/myItem'>My Item</CustomLink>
                             <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/blogs'>Blogs</CustomLink>
                         </Nav>
-                        {/* {
-                                user ? <button className='btn btn-sm btn-danger' onClick={handleLogout}>Logout</button> : <CustomLink className='text-white btn btn-sm btn-danger' to='/login'>Login</CustomLink>
-                            } */}
-                        <CustomLink className='text-decoration-none px-3 fs-5 fw-bold' to='/login'>Login</CustomLink>
+                        {
+                            user ? <button className='btn btn-sm btn-info fw-bold' onClick={handleLogout}>Logout</button> : <CustomLink className='text-white btn btn-sm btn-info' to='/login'>Login</CustomLink>
+                        }
+                        {
+                            user ? <p>{user.email}</p>  : null
+                        }
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
