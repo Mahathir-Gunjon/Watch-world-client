@@ -1,26 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
+import useWatch from '../../Hooks/UseWatch';
 
 
 const ManageWatch = () => {
 
     const { watchId } = useParams();
-    const [watchDetails, setWatchDetails] = useState({});
+    const [watchs, setWatchs] = useWatch();
+    // const [watchDetails, setWatchDetails] = useState({});
+    const url = `http://localhost:5000/watch/${watchId}`;
+
+    const deliveredQuantity = parseInt(watchs.quantity) - 1;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/watch/${watchId}`)
+        fetch(url)
             .then(res => res.json())
-            .then(data => setWatchDetails(data));
+            .then(data => setWatchs(data));
     }, [watchId]);
 
     const handleDelivered = () => {
-        const quantity = parseInt(watchDetails.quantity) - 1;
-        console.log(quantity);
-        const url = `http://localhost:5000/watch/${watchId}`;
+        console.log(deliveredQuantity);
+
         fetch(url, {
-            
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ deliveredQuantity }),
         })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
 
     return (
@@ -30,19 +42,19 @@ const ManageWatch = () => {
                 <div className="card rounded-3 border-0 shadow-lg my-5 py-5">
                     <div className="row g-0">
                         <div className="col-md-5">
-                            <img src={watchDetails.image} className="img-fluid rounded-start object-fit" style={{ height: "100%" }} alt="..." />
+                            <img src={watchs.image} className="img-fluid rounded-start object-fit" style={{ height: "100%" }} alt="..." />
                         </div>
                         <div className="col-md-7">
                             <div className="card-body">
-                                <h2 className="card-title">{watchDetails.title}</h2>
+                                <h2 className="card-title">{watchs.title}</h2>
                                 <div className="card-text">
-                                    <h3>Supplier: {watchDetails.supplier}</h3>
-                                    <h3>Price: ${watchDetails.price}</h3>
-                                    <h3>Quantity: {watchDetails.quantity}</h3>
-                                    <p>Description: {watchDetails.description}</p>
+                                    <h3>Supplier: {watchs.supplier}</h3>
+                                    <h3>Price: ${watchs.price}</h3>
+                                    <h3>Quantity: {watchs.quantity}</h3>
+                                    <p>Description: {watchs.description}</p>
                                 </div>
                             </div>
-                            <button onClick={handleDelivered} className='btn btn-outline-info'>Deliver</button>
+                            <button onClick={()=>handleDelivered()} className='btn btn-outline-info'>Deliver</button>
                             <br />
                             <div className="input-group mt-3 " style={{width:"350px"}}>
                                 <input type="number" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />

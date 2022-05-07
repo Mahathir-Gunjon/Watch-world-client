@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import './Additem.css'
 import { useForm } from "react-hook-form";
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const Additem = () => {
@@ -63,6 +63,7 @@ const Additem = () => {
                 </div>
                 </div>
             </Container>
+            <ToastContainer />
         </div>
     );
 };
