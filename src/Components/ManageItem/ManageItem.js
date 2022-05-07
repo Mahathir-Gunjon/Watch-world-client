@@ -1,11 +1,28 @@
 // import userEvent from '@testing-library/user-event';
 import React from 'react';
+import { toast } from 'react-toastify';
 import useWatch from '../../Hooks/UseWatch';
 
 
 const ManageItem = () => {
-    const [watchs] = useWatch();
+    const [watchs, setWatchs] = useWatch();
     // const watchQnt = watchs.quantity;
+
+    const handleDelete = (id) => {
+        const proceed = window.confirm('Are you sure you want to delete this item?');
+        if (proceed) {
+            const url = `http://localhost:5000/watch/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(result => {
+                    toast("Item deleted successfully", { type: "success" });
+                    const remaining = watchs.filter(watch => watch._id !== id);
+                    setWatchs(remaining);
+                })
+        }
+    }
 
     return (
         <div className='mt-5'>
@@ -31,7 +48,7 @@ const ManageItem = () => {
                                     <td>${watch.price}</td>
                                     <td className='text-center' style={{ width: '190px' }}>
                                         <button className='btn btn-outline-info shadow mx-1'>Update</button>
-                                        <button className='btn btn-outline-danger shadow mx-1'>Delete</button>
+                                        <button onClick={()=> handleDelete(watch._id)} className='btn btn-info shadow mx-1'>Delete</button>
                                     </td>
                                 </tr>
                                 ))}

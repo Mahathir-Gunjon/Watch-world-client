@@ -5,6 +5,7 @@ import Blogs from './Components/Blogs/Blogs';
 import Home from './Components/Home/Home';
 import Inventory from './Components/Inventory/Inventory';
 import ManageItem from './Components/ManageItem/ManageItem';
+import ManageWatch from './Components/ManageWatch/ManageWatch';
 import MyItem from './Components/MyItem/MyItem';
 import Login from './Components/RegistationAndLogin/Login/Login';
 import Signup from './Components/RegistationAndLogin/Sugnup/Signup';
@@ -23,6 +24,11 @@ function App() {
         <Route path="/inventory" element={<Inventory />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/watch/:watchId" element={
+          <RequireAuth>
+            <ManageWatch />
+          </RequireAuth>}
+        />
         <Route path="/manage" element={
           <RequireAuth>
             <ManageItem />
