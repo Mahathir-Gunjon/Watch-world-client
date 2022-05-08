@@ -11,7 +11,7 @@ const ManageWatch = () => {
     // const [watchDetails, setWatchDetails] = useState({});
     const url = `http://localhost:5000/watch/${watchId}`;
 
-    const deliveredQuantity = parseInt(watchs.quantity) - 1;
+    const deliveredQuantity = parseFloat(watchs.quantity) - 1;
 
     useEffect(() => {
         fetch(url)

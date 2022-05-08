@@ -1,5 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useWatch from '../../Hooks/UseWatch';
 import InventoryDetails from '../Inventory/InventoryDetails';
 import './Home.css'
@@ -42,8 +43,10 @@ const Home = () => {
                             <div className="col-md-7 mt-md-5">
                                 <div className="mt-5 text-black header-text">
                                     <h1 className='display-1 md:display-4 text-black fw-bold'><span className='text-info'>Watch</span> World</h1>
-                                    <p className='fs-5'>I'm a independent photographer with few services. I'm providing photography services like wedding shoot,out door shoots, product photography etc</p>
+                                    <p className='fs-5'>This is a ware House of branded smart and analog watch. You can find your watch here manage item add item and update quantity</p>
+                                    <Link to='/inventory'>
                                     <button type="button" className="btn btn-info btn-lg fw-bold">Inventory</button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
