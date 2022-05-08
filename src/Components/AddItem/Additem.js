@@ -10,7 +10,7 @@ const Additem = () => {
 
     const [user] = useAuthState(auth);
 
-
+    const 
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 

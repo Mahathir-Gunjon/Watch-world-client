@@ -7,7 +7,6 @@ import useWatch from '../../Hooks/UseWatch';
 
 const ManageItem = () => {
     const [watchs, setWatchs] = useWatch();
-    // const watchQnt = watchs.quantity;
 
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete this item?');
