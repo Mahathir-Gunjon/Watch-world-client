@@ -10,7 +10,7 @@ const ManageWatch = () => {
     const [watchs, setWatchs] = useWatch();
     const { title, price, quantity, image, description, supplier } = watchs;
     // const [watchDetails, setWatchDetails] = useState({});
-    const url = `http://localhost:5000/watch/${watchId}`;
+    const url = `https://infinite-inlet-85185.herokuapp.com/watch/${watchId}`;
 
     useEffect(() => {
         fetch(url)
@@ -52,13 +52,13 @@ const ManageWatch = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body:JSON.stringify(newItem)
+            body: JSON.stringify(newItem)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
             })
-            e.target.reset();
+        e.target.reset();
     }
 
 

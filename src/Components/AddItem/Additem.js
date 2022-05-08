@@ -10,13 +10,12 @@ const Additem = () => {
 
     const [user] = useAuthState(auth);
 
-    const 
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/watch`;
+        const url = `https://infinite-inlet-85185.herokuapp.com/watch`;
         fetch(url, {
             method: 'POST',
             headers: {

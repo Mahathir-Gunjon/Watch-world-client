@@ -11,7 +11,7 @@ const ManageItem = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure you want to delete this item?');
         if (proceed) {
-            const url = `http://localhost:5000/watch/${id}`;
+            const url = `https://infinite-inlet-85185.herokuapp.com/watch/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

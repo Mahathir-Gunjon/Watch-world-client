@@ -4,7 +4,7 @@ const useWatch = () => {
     const [watchs, setWatchs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/watch')
+        fetch('https://infinite-inlet-85185.herokuapp.com/watch')
             .then(res => res.json())
             .then(data => setWatchs(data));
     }, []);

@@ -74,9 +74,9 @@ const Signup = () => {
 
 
     return (
-        <div className='hero-section bg-light text-black'>
+        <div className='hero-section text-black pt-5 mt-5'>
             <div className='container'>
-                <Form onSubmit={handleSubmit} className='mx-auto px-4 py-5 from-bg rounded-3' style={{ width: '400px' }}>
+                <Form onSubmit={handleSubmit} className='mx-auto px-4 py-5 bg-light rounded-3' style={{ width: '400px' }}>
                     <h2 className='text-danger mb-3 text-center'>Signup</h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
