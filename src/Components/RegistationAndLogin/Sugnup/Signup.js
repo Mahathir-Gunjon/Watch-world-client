@@ -74,31 +74,31 @@ const Signup = () => {
 
 
     return (
-        <div className='hero-section bg-black text-white'>
+        <div className='hero-section bg-light text-black'>
             <div className='container'>
-                <Form onSubmit={handleSubmit} className='bg-dark mx-auto px-4 py-5 from-bg rounded-3' style={{ width: '400px' }}>
+                <Form onSubmit={handleSubmit} className='mx-auto px-4 py-5 from-bg rounded-3' style={{ width: '400px' }}>
                     <h2 className='text-danger mb-3 text-center'>Signup</h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control onChange={handleEmail} type="email" placeholder="Enter email" required />
-                        {errors?.email && <Form.Text className="text-danger">{errors?.email}</Form.Text>}
+                        {errors?.email && <Form.Text className="text-info">{errors?.email}</Form.Text>}
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control onChange={handlePassword} type="password" placeholder="Password" required />
-                        {errors?.password && <Form.Text className="text-danger">{errors?.password}</Form.Text>}
+                        {errors?.password && <Form.Text className="text-info">{errors?.password}</Form.Text>}
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formConfirmPassword">
                         <Form.Label>Confirm Password</Form.Label>
                         <Form.Control onChange={handleConfirmPassword} type="password" placeholder="Confirm Password" required />
-                        {errors?.password && <Form.Text className="text-danger">{errors?.password}</Form.Text>}
+                        {errors?.password && <Form.Text className="text-info">{errors?.password}</Form.Text>}
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check type="checkbox" label="Accept terms and conditions" />
                     </Form.Group>
-                    {hookError && <Form.Text className="text-danger">{hookError?.message}</Form.Text>}
+                    {hookError && <Form.Text className="text-info">{hookError?.message}</Form.Text>}
                     {loading && <Form.Text className="text-white">Loading...</Form.Text>}
-                    <button className='btn btn-lg btn-outline-danger w-100 mt-4' type="submit">Sign Up</button>
+                    <button className='btn btn-lg btn-outline-info w-100 mt-4' type="submit">Sign Up</button>
                     <p className='text-center'>Already signed up?  <Link className='text-decoration-none text-danger' to='/login'>Login now</Link></p>
                 </Form>
 

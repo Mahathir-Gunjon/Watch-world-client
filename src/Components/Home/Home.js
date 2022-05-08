@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useWatch from '../../Hooks/UseWatch';
 import InventoryDetails from '../Inventory/InventoryDetails';
+import RecentItem from '../RecentItems/RecentItem';
 import './Home.css'
 
 const Home = () => {
@@ -64,6 +65,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            <RecentItem/>
 
         </>
     );

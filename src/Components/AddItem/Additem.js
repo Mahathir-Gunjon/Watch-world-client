@@ -10,7 +10,7 @@ const Additem = () => {
 
     const [user] = useAuthState(auth);
 
-    
+
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
@@ -24,11 +24,11 @@ const Additem = () => {
             },
             body: JSON.stringify(data)
         })
-        .then(res => res.json())
-        .then(result => {
-            toast("Item added successfully", { type: "success" });
+            .then(res => res.json())
+            .then(result => {
+                toast("Item added successfully", { type: "success" });
 
-        })
+            })
     }
 
 
@@ -40,27 +40,32 @@ const Additem = () => {
                     <p className='fs-5 text-dark'>Add a new Watch with name and details</p>
                 </div>
 
-                <div className="container">
-                <div className='text-center form-width mx-auto'>
-                    <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                        <input type='text' placeholder='Enter watch name or brand' {...register("title", { required: true })} />
-                        <br />
-                        <input type='text' placeholder='Supplier name' {...register("supplier", { required: true })} />
-                        <br />
-                        <input type='number' placeholder='Product Price' {...register("price", { required: true })} />
-                        <br />
-                        <input type='number' placeholder='Product quantity' {...register("quantity", { required: true })} />
-                        <br />
-                        <input type='text-area' placeholder='Details' {...register("description", { required: true })} />
-                        <br />
-                        <input type='text' placeholder='Product Image url' {...register("image", { required: true })} />
-                        <br />
-                        {/* errors will return when field validation fails  */}
-                        {errors.exampleRequired && <span>This field is required</span>}
+                <div className="container py-5">
+                    <div className="row">
+                        <div className="col-md-5">
+                            <img className='img-fluid' src="https://i.ibb.co/qCq1Dg8/undraw-add-information-j2wg.png" alt="" />
+                        </div>
+                        <div className=' col-md-7 text-center form-width mx-auto bg-light p-5 shadow-lg'>
+                            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
+                                <input className="form-control" type='text' placeholder='Enter watch name or brand' {...register("title", { required: true })} />
+                                <br />
+                                <input className="form-control" type='text' placeholder='Supplier name' {...register("supplier", { required: true })} />
+                                <br />
+                                <input className="form-control" type='number' placeholder='Product Price' {...register("price", { required: true })} />
+                                <br />
+                                <input className="form-control" type='number' placeholder='Product quantity' {...register("quantity", { required: true })} />
+                                <br />
+                                <textarea className="form-control" type='text-area' placeholder='Details' {...register("description", { required: true })} />
+                                <br />
+                                <input className="form-control" type='text' placeholder='Product Image url' {...register("image", { required: true })} />
+                                <br />
+                                {/* errors will return when field validation fails  */}
+                                {errors.exampleRequired && <span>This field is required</span>}
 
-                        <input type="submit" />
-                    </form>
-                </div>
+                                <input className='btn btn-outline-info btn-lg' type="submit" />
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </Container>
             <ToastContainer />
